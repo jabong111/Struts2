@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hello" namespace="/hello" extends="struts-default">
+		<action name="hello" class="hello.action.HelloWorld">
+			<interceptor-ref name="params"/>	<!-- 클라이언트에서 서블릿인보케이션영역에 올라가기전에 인터셉트해서 셋메소드를 실행해서 변수저장 -->
+			<interceptor-ref name="workflow"/>	<!-- validate 메소드 실행해서 처리 -->
+			<result name="success">/hello/result.jsp</result>	
+			<result name="input">/hello/hello.jsp</result>	
+		</action>
+	</package>
+
+</struts>
