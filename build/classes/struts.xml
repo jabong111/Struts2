@@ -25,5 +25,14 @@
 			<result name="login">/login/login.jsp</result>
 		</action>
 	</package>
+	
+	<package name="singleUpload" extends="struts-default">
+		<action name="uploadForm">	
+			<result>/upload/uploadForm.jsp</result>
+		</action>
+		<action name="uploadList" class="upload.single.SingleUpload" method="upload">
+			<result>/upload/uploadList.jsp</result>	
+		</action>
+	</package>
 
 </struts>
