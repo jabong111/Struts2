@@ -7,10 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>${FieldErrors.validate }</p>
-<form action="/Struts2/hello/hello.action">
-	input your name:<input type="text" name="name">
-	<input type="submit">	
+<form action="/Struts2/login.action" >
+	ID:<input type="text" name="id"><br>
+	PASSWORD:<input type="password" name="password">
+	<input type="submit">
 </form>
+
 </body>
 </html>
